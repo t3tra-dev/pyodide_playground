@@ -7,7 +7,8 @@
   <body>
     <pre>open the console.</pre>
     <script type="text/javascript">
-      async function main() {let pyodide = await loadPyodide(); }; main();
+      let pyodide;
+      async function main() { pyodide = await loadPyodide(); }; main();
     </script>
   </body>
 </html>
