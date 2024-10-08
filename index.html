@@ -6,8 +6,13 @@
   </head>
   <body>
     <pre>open the console.</pre>
+    <pre>> runPython("console.log('Hello, world!!')")</pre>
     <script type="text/javascript">
-      async function main() { globalThis.pyodide = await loadPyodide(); }; main();
+      async function main() {
+        let pyodide = await loadPyodide();
+        globalThis.runPython = pyodide.runPython;
+        console.log("Pyodide loaded.");
+      }; main();
     </script>
   </body>
 </html>
