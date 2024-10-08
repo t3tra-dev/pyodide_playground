@@ -10,6 +10,7 @@
     <script type="text/javascript">
       async function main() {
         let pyodide = await loadPyodide();
+        pyodide.runPython("from js import *");
         globalThis.runPython = pyodide.runPython;
         console.log("Pyodide loaded.");
       }; main();
